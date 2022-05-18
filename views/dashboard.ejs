@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= user.charAt(0).toUpperCase() + user.slice(1) %>'s TO-DO LIST</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+  <body>
+    <ul>
+      <% if(messages.success_msg) { %>
+      <li><%= messages.success_msg %></li>
+      <% } %>
+    </ul>
+    <ul>
+      <% if(messages.error) { %>
+      <li><%= messages.error %></li>
+      <% } %>
+    </ul>
+    <div class="todo-wrapper">
+      <div class="todo-detail">
+        <h2 class="subtitle">A TO-DO List App</h2>
+        <h1 class="title"><%= user.charAt(0).toUpperCase() + user.slice(1) %>'s To-Do LIST</h1>
+        <p class="description">
+          welcome <%= user.charAt(0).toUpperCase() + user.slice(1) %>, personalize your list today.
+        </p>
+        <a href="/list" class="list-button">View your list</a>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br><a href="/users/logout" class="list-button">LOGOUT</a></br>
+        
+      </div>
+      <div class="todo-image">
+        <img src="/images/todo.jpg">
+      </div>
+    </div>
+  </body>
+</html>

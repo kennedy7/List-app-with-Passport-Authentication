@@ -1,0 +1,63 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My HOME page</title>
+  <meta name="description" content="My Page Description">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+</head>
+<body>
+  <h1>HOME</h1>
+  <ul>
+    <% if(messages.success_msg) { %>
+    <li><%= messages.success_msg %></li>
+    <% } %>
+  </ul>
+  <ul>
+    <% if(messages.error) { %>
+    <li><%= messages.error %></li>
+    <% } %>
+  </ul>
+  <br><a href="/users/register">register</a></br>
+  <a href="/users/login">Login</a>
+</body>
+</html>  -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TO-DO LIST</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+  <body>
+    <ul>
+      <% if(messages.success_msg) { %>
+      <li><%= messages.success_msg %></li>
+      <% } %>
+    </ul>
+    <ul>
+      <% if(messages.error) { %>
+      <li><%= messages.error %></li>
+      <% } %>
+    </ul>
+    <div class="todo-wrapper">
+      <div class="todo-detail">
+        <h2 class="subtitle">A TO-DO List App</h2>
+        <h1 class="title">LIST</h1>
+        <p class="description">
+          This web app lets you create and manage your TO-DO list easily and efficiently.
+          <br>
+          Add activities you want to do anytime, anywhere.
+        </p>
+        <!-- <a href="/list" class="list-button">View your list</a> -->
+        <a href="/users/login" class="list-button">LOG IN</a>
+        <br><a href="/users/register" class="list-button">SIGN UP</a></br>
+      </div>
+      <div class="todo-image">
+        <img src="/images/todo.jpg">
+      </div>
+    </div>
+  </body>
+</html>
