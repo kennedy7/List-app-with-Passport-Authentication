@@ -18,7 +18,7 @@ router.get("/users/login", (req, res) => {
   res.render("login");
 });
 
-router.get("/users/dashboard", checkAuthenticated, (req, res) => {
+router.get("/users/dashboard", (req, res) => {
   res.render("dashboard", { user: req.user.name });
 });
 
@@ -30,6 +30,9 @@ router.post("/users/register", registerUser, (req, res) => {
     res.render("login");
   }
 });
+
+
+
 
 router.post(
   "/users/login",
